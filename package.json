@@ -1,0 +1,16 @@
+{
+  "name": "discord-reminder-bot",
+  "version": "1.0.0",
+  "description": "Always-on Discord reminder bot with prefix and slash commands, reaction opt-in, and persistent storage.",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "npx nodemon src/index.js",
+    "deploy": "node src/deploy-commands.js"
+  },
+  "dependencies": {
+    "better-sqlite3": "^11.7.0",
+    "discord.js": "^14.16.0",
+    "dotenv": "^16.4.0"
+  }
+}
