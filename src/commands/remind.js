@@ -35,13 +35,13 @@ async function handleRemind({ client, guildId, channelId, userId, timeString, re
 
   const embed = new EmbedBuilder()
     .setColor(0x5865F2)
-    .setTitle(`${REACT_EMOJI} Reminder Set`)
+    .setTitle('Reminder Set')
     .setDescription(reminder.reminder_text)
     .addFields(
       { name: 'Fires in', value: parsed.humanReadable, inline: true },
       { name: 'At', value: `<t:${Math.floor(remindAt / 1000)}:F>`, inline: true },
     )
-    .setFooter({ text: `React with ${REACT_EMOJI} to get reminded too | ID: ${reminder.id}` })
+    .setFooter({ text: `React to get reminded too | ID: ${reminder.id}` })
     .setTimestamp(fireDate);
 
   const sent = await replyFn({ embeds: [embed], fetchReply: true });

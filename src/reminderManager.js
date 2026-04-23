@@ -3,6 +3,7 @@ const { formatDuration } = require('./timeParser');
 
 // setTimeout max is 24.8 days (2^31 - 1 ms), for longer just chain lol
 const MAX_TIMEOUT = 2_147_483_647;
+const REACT_EMOJI = '\u23F0';
 
 const activeTimers = new Map();
 
@@ -93,4 +94,4 @@ function cancelReminder(reminderId) {
   db.markFired(reminderId);
 }
 
-module.exports = { scheduleReminder, scheduleAll, cancelReminder, fireReminder };
+module.exports = { scheduleReminder, scheduleAll, cancelReminder, fireReminder, REACT_EMOJI };
