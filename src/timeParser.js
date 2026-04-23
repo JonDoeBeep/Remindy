@@ -1,4 +1,3 @@
-const MAX_DURATION_MS = 365 * 24 * 60 * 60 * 1000; // 1 year
 
 const UNIT_MAP = {
   s: 1000, sec: 1000, secs: 1000, second: 1000, seconds: 1000,
@@ -32,7 +31,7 @@ function parseTime(input) {
     totalMs += value * multiplier;
   }
 
-  if (totalMs <= 0 || totalMs > MAX_DURATION_MS) return null;
+  if (totalMs <= 0) return null;
 
   return { ms: totalMs, humanReadable: formatDuration(totalMs) };
 }
