@@ -93,4 +93,4 @@ function cancelReminder(reminderId) {
   db.markFired(reminderId);
 }
 
-module.exports = { scheduleReminder, scheduleAll, cancelReminder, fireReminder, REACT_EMOJI };
+module.exports = { scheduleReminder, scheduleAll, cancelReminder, fireReminder };
